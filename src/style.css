@@ -71,7 +71,7 @@ button:hover {
     margin: 50px 25%;
     padding: 20px;
     background: linear-gradient( rgba(90, 89, 89, 0.5), rgba(0, 0, 0, 0.5) );
-    border: black 1px solid;
+    border: none;
     border-radius: 5px;
 }
 
