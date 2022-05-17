@@ -1,3 +1,5 @@
+import Coin from './img/coin-icon.png'
+
 export default function makeMenu() {
 
     const menu = document.createElement('div');
@@ -9,26 +11,37 @@ export default function makeMenu() {
     menu.appendChild(title);
 
     const menuList = {
-        Drinks: ['Chuckola Cola', 'Jaeger Bob-ombs', 'Fireball Whiskey'],
-        Entrees: ['Super Mushroom Pasta', 'Spaghetti and Goombas', 'Cheeps and Chips'],
-        Deserts: ['Princess Peach Cobbler', 'Pipe-ing Hot Apple Pie', 'Superstar Sugar Cookies'] 
-    };
-    
-    //Iterates through menuList to make 'ul' elements then iterates though each food array and makes an 'li' element for each food. Each 'li' element is then appened to the parent 'ul' element
-    for (let [menuType, items] of Object.entries(menuList)) {
-        let menuSection = document.createElement('ul')
-        menuSection.textContent = menuType;
-
-        items.forEach(item => {
-            let listItem = document.createElement('li');
-            listItem.innerHTML = item;
-            menuSection.appendChild(listItem);
-        })
-        
-        //append each complete 'ul' element to the main 'menu' div element
-        menu.appendChild(menuSection)
+        Drinks: [{food: 'Jaeger Bob-ombs', price: '25'}, {food: 'Fireball Whiskey', price: '20'}, {food: 'Chuckola Cola', price: '10'}],
+        Entrees: [{food: 'Super Mushroom Pasta', price: '40'}, {food: 'Spaghetti and Goombas', price: '30'}, {food: 'Cheeps and Chips', price: '20'}],
+        Deserts: [{food: 'Princess Peach Cobbler', price: '20'}, {food: 'Pipe-ing Hot Apple Pie', price: '20'}, {food: 'Superstar Sugar Cookies', price: '10'}] 
     }
 
+    for (let courseType in menuList) {  
+        let courseSection = document.createElement('ul');
+        courseSection.innerHTML = courseType;
+
+        menuList[courseType].forEach(item => {
+            const listItem =  document.createElement('li');
+
+            let food = document.createElement('p');
+            food.innerHTML = item.food + ' ... ';
+
+            let coinIcon = new Image();
+            coinIcon.src = Coin;
+            coinIcon.classList.add('coinIcon');
+
+            let price = document.createElement('p');
+            price.innerHTML = item.price; 
+        
+            listItem.appendChild(food);
+            listItem.appendChild(coinIcon);
+            listItem.appendChild(price);
+
+            courseSection.appendChild(listItem);
+        })
+
+        menu.appendChild(courseSection);
+    }
 
     return menu;
 };

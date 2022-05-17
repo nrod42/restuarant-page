@@ -10,9 +10,9 @@
     margin: 0;
     font-family: 'mario-font', Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
-    color: gold;
+    color: rgb(62, 199, 62);
+    text-shadow: black 1px 1px 2px;
 }
-
 
 :root {
 
@@ -31,11 +31,17 @@ body {
 }
 
 #content {
+    min-height: 100vh;
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar {
+    justify-self: flex-start;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,10 +50,29 @@ body {
 button {
     margin: 0 5px;
     padding: 10px;
+    background: url('./img/coin-block-button.png');
+    background-size: cover;
+    height: 120px;
+    width: 120px;
+    min-width: 120px;
+    color: white;
+}
+
+button:hover {
+    filter: brightness(50%);
+}
+
+.hitBlock {
+    background: url('./img/coin-block-hit-button.png');
+    background-size: cover;
 }
 
 .tab {
-    margin: 50px 10px;
+    margin: 50px 25%;
+    padding: 20px;
+    background: linear-gradient( rgba(90, 89, 89, 0.5), rgba(0, 0, 0, 0.5) );
+    border: black 1px solid;
+    border-radius: 5px;
 }
 
 .homeTab {
@@ -55,6 +80,21 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+h1, p, button {
+    text-align: center;
+}
+
+.mlLogo {
+    max-width: 100%;
+    width: 500px;
+    min-width: 300px;
+    height: auto;
+}
+
+.hours {
+    padding: 15px;
 }
 
 .menuTab {
@@ -67,14 +107,24 @@ button {
 ul {
     margin: 10px 0;
     padding: 0;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
+    color:rgba(235, 61, 17, 0.966);
 }
 
 li {
     font-weight: 100;
     list-style-type: none;
     margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coinIcon {
+    width: 25px;
+    height: auto;
 }
 
 .contactTab {
@@ -84,11 +134,24 @@ li {
     justify-content: center;
 }
 
+.bros {
+    margin: 20px;
+    max-width: 100%;
+    min-width: 300px;
+    width: 500px;
+    height: auto;
+}
+
 h1 {
     margin: 20px 0;
-    font-size: 2rem;
+    font-size: 2.3rem;
+    color: rgba(235, 61, 17, 0.966)
 }
 
 p {
     margin: 10px;
+}
+
+footer {
+    color: gold;
 }
