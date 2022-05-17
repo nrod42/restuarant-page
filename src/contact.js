@@ -1,6 +1,6 @@
 import Bros from './img/bros.jpg';
 
-export default function makeContact() {
+const makeContact = () => {
 
     const contact = document.createElement('div');
     contact.classList.add('contactTab');
@@ -21,7 +21,7 @@ export default function makeContact() {
     phone.textContent = '(888) 913-1985';
 
     const email = document.createElement('p');
-    email.textContent = 'mlbrothers@star.com';
+    email.textContent = 'mlbrothers@mrkingdom.com';
 
     const bros = new Image();
     bros.src = Bros;
@@ -37,3 +37,5 @@ export default function makeContact() {
 
     return contact;
 };
+
+export default makeContact;

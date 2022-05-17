@@ -1,6 +1,6 @@
 import Logo from './img/ml-logo.png';
 
-export default function makeHome() {
+const makeHome = () => {
 
     const home = document.createElement('div');
     home.classList.add('homeTab');
@@ -21,6 +21,7 @@ export default function makeHome() {
     const aboutTwo = document.createElement('p');
     aboutTwo.textContent = 'It is regarded as the best italian restuarant (made by japanese plumbers) in the world!';
 
+    //Restuarant Hours Div
     const hours = document.createElement('div');
     hours.classList.add('hours');
 
@@ -51,3 +52,4 @@ export default function makeHome() {
     return home;
 };
 
+export default makeHome;

@@ -1,6 +1,6 @@
 import Coin from './img/coin-icon.png'
 
-export default function makeMenu() {
+const makeMenu = () => {
 
     const menu = document.createElement('div');
     menu.classList.add('menuTab');
@@ -13,9 +13,10 @@ export default function makeMenu() {
     const menuList = {
         Drinks: [{food: 'Jaeger Bob-ombs', price: '25'}, {food: 'Fireball Whiskey', price: '20'}, {food: 'Chuckola Cola', price: '10'}],
         Entrees: [{food: 'Super Mushroom Pasta', price: '40'}, {food: 'Spaghetti and Goombas', price: '30'}, {food: 'Cheeps and Chips', price: '20'}],
-        Deserts: [{food: 'Princess Peach Cobbler', price: '20'}, {food: 'Pipe-ing Hot Apple Pie', price: '20'}, {food: 'Superstar Sugar Cookies', price: '10'}] 
+        Desserts: [{food: 'Princess Peach Cobbler', price: '20'}, {food: 'Pipe-ing Hot Apple Pie', price: '20'}, {food: 'Superstar Sugar Cookies', price: '10'}] 
     }
 
+    //Iterates throughs menuList object above to make ul sections for each meal type
     for (let courseType in menuList) {  
         let courseSection = document.createElement('ul');
         courseSection.innerHTML = courseType;
@@ -45,3 +46,5 @@ export default function makeMenu() {
 
     return menu;
 };
+
+export default makeMenu;
