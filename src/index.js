@@ -38,7 +38,7 @@ contactBtn.addEventListener('click', switchTab);
 contactBtn.addEventListener('click', switchButton);
 
 const footer = document.createElement('footer');
-footer.innerHTML = "By Nigel Rodriguez";
+footer.innerHTML = "By: Nigel Rodriguez";
 content.appendChild(footer);
 
 

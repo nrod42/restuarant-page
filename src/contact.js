@@ -9,7 +9,7 @@ export default function makeContact() {
     title.textContent = 'Get in Touch!';
     
     const contactMessageOne = document.createElement('p');
-    contactMessageOne.textContent = 'We\'d love to here from you!';
+    contactMessageOne.textContent = 'We\'d love to hear from you!';
 
     const contactMessageTwo = document.createElement('p');
     contactMessageTwo.textContent = 'Contact us and make your reservation today!';
