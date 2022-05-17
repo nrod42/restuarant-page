@@ -13,14 +13,11 @@ const makeHome = () => {
     title.textContent = 'Italian Restuarant';
 
     const tagline = document.createElement('p');
-    tagline.textContent = 'The best japanese-made italian restuarant in the world!';
+    tagline.textContent = 'Authentic japanese-made italian cuisine';
     
     const about = document.createElement('p');
-    about.textContent = 'Mario and Luigi was founded in 1985 in Brooklyn, NY'; 
+    about.textContent = 'Founded in 1985 in Brooklyn, NY by Japanese brothers, Mario & Luigi, this 5 star restuarant is often regarded as THE best italian restuarant (made by japanese plumbers) in the world!'; 
     
-    const aboutTwo = document.createElement('p');
-    aboutTwo.textContent = 'It is regarded as the best italian restuarant (made by japanese plumbers) in the world!';
-
     //Restuarant Hours Div
     const hours = document.createElement('div');
     hours.classList.add('hours');
@@ -46,7 +43,6 @@ const makeHome = () => {
     home.appendChild(title);
     home.appendChild(tagline);
     home.appendChild(about);
-    home.appendChild(aboutTwo);
     home.appendChild(hours);
 
     return home;
